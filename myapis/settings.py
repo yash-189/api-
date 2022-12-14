@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure--(jpe3^ne=plo3dx6&^*)%h+o2_il(tv@4#81+e5wj5rh2^tb_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app', '.now.sh']
+ALLOWED_HOSTS = ['.vercel.app', '.now.sh','localhost','127.0.0.1']
 
 
 
@@ -79,12 +79,18 @@ WSGI_APPLICATION = 'myapis.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
+DATABASES = {
+    'default':
+        {
+            'ENGINE': 'djongo',
+            'NAME': '<database-name>',
+            'CLIENT':
+                {
+                    'host':
+                       'mongodb+srv://yash12:VSGszGLlGjWMOapN@yoga.jrlf3lj.mongodb.net/?retryWrites=true&w=majority'
+                }
+        }
+}
 
 
 # Password validation
@@ -139,7 +145,7 @@ REST_FRAMEWORK = {
     )
 }
 CORS_ALLOWED_ORIGINS = [
-
+'http://localhost:3000',
     "http://localhost:3000",
     "https://yoga-add.netlify.app",
 ]

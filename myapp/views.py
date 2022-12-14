@@ -134,4 +134,4 @@ class CompletePayment(APIView):
             return Response({"status": "success", "data":"payment successfull",'email':email}, status=status.HTTP_200_OK)
         
         except Exception as e:
-            return Response({'status':'error','message':'user not registered'})
+            return Response({'status':'error','message':'user not registered','uu':usrr})

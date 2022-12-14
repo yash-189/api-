@@ -8,6 +8,7 @@ class MonthSerializer(serializers.ModelSerializer):
     class Meta:
         model = months
         fields = ('__all__')
+        
 
 
 
