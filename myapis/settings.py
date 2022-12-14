@@ -142,3 +142,6 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     # "http://127.0.0.1:9000",
 ]
+STATICFILES_DIRS = [BASE_DIR/'static',]
+STATIC_ROOT = BASE_DIR/'staticfiles'
+ALLOWED_HOSTS = ['.vercel.app', '.now.sh']
